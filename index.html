@@ -1,0 +1,112 @@
+<!doctype html>
+<html style="width:80%">
+<head>
+<meta charset="UTF-8">
+
+<title>main2</title>
+  <link href="main2.css" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script src="jquery-linedtextarea.js"></script>
+  <link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+  </head>
+
+<body>
+  <div class="main">
+  	<div class="header">
+    	<img src="UCLA HSSRP 2016/UCLAgeotechnicalengineering.png" alt="UCLA geotechnical engineering">
+    </div>
+    <div class="browse">
+          <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+    </div>
+    <div class="container1">
+      <div class="metadata">
+        <div class="inputcontainer">
+        <form>
+        <fieldset>
+        	<legend>metadata</legend>
+          <div class="inputall"><label>Operator</label><input></div>
+          <div class="inputall"><label>Date</label><input></div>
+          <div class="inputall"><label>Start line</label><input></div>
+          <div class="inputall"><label>Location</label><input id="location" ></div>
+          <div class="depthvalue">
+            <label>Depth unit</label>
+            <select>
+              <option id = "dptUnit"></option>
+              <option value="1">m</option>
+              <option value="2">km</option>
+              <option value="3">ft</option>
+              <option value="4">mile</option>
+            </select>
+          </div>
+          <div class="depthvalue">
+            <label>Tip Resistance unit</label>
+            <select>
+                                    <option id = "qtUnit"></option>
+                                    <option value="1">kPa</option>
+                                    <option value="2">MPa</option>
+                                    <option value="3">psf</option>
+                                    <option value="4">psi</option>
+                                </select>
+                        </div>
+                    	<div class="depthvalue">
+                            <label>Skin Friction unit</label>
+                                <select>
+                                    <option id = "fsUnit"></option>
+                                    <option value="1">kPa</option>
+                                    <option value="2">MPa</option>
+                                    <option value="3">psf</option>
+                                    <option value="4">psi</option>
+                                </select>
+                        </div>
+                    	<div class="depthvalue">
+                            <label>Pore Pressure unit</label>
+                                <select>
+                                    <option id = "uUnit"></option>
+                                    <option value="1">kPa</option>
+                                    <option value="2">MPa</option>
+                                    <option value="3">psf</option>
+                                    <option value="4">psi</option>
+                                </select>
+                        </div>
+                </fieldset>        
+				</form>
+                </div>
+            </div>
+      <div class="text">
+      	<form>
+        <fieldset>
+        	<legend>data</legend>
+      		<textarea id="output" class="lined" readonly style="resize:none; height:100%; width:90%"></textarea>
+        </fieldset>
+        </form>
+<script>
+$(function() {
+	$(".lined").linedtextarea(
+		{selectedLine: 1}
+	);
+});
+</script>            
+           </div>
+        </div>
+        <div class="container2">
+        	<div class="plotbutton">
+            	<button>Plot</button>
+            </div>
+        </div>
+        <div class="container3">
+        <form>
+        <fieldset>
+        	<legend>plots</legend>
+            <div class="fieldsetdiv">
+                <div class="plot1">plot1</div>
+                <div class="plot2">plot2</div>
+                <div class="plot3">plot3</div>
+            </div>
+        </fieldset>
+        </form>
+        </div>
+    </div>
+<!--<textarea id='output' rows="1" style="width:0"></textarea>-->
+<!--<table id='table' border="1"></table>-->
+</body>
+</html>
